@@ -5,7 +5,7 @@ else:
     print("Numero menor")
 
     if 1 < 2:
-        pass
+        pass # comando que sirve para que se ignore el codigo incompleto
 
 def function_pendiente():
     pass
