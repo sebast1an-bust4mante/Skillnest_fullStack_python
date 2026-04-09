@@ -2,11 +2,31 @@
 # Desarrolla un programa que solicite al usuario cuántos números pares desea ver ($n$). 
 # El programa debe imprimir los primeros $n$ números pares positivos.
 # Solicitar al usuario la cantidad de números pares que desea ver
+def paresDinamicos():
+  n = int(input("¿Cuantos numeros pares deseas ver?: "))
+  pares = []
+  for i in range (1, (1, n+2) + 1):
+    if i % 2 == 0:
+      pares.append(i) # ".append" inserta (i)
+  print(f"Mostrando pares: {pares}")
 
 # 2. Verificador de Edad y Acceso
 # Pide al usuario su año de nacimiento. 
 # Calcula su edad y muestra si es mayor de edad (18+). 
 # Si tiene menos de 18, indica cuántos años le faltan para la mayoría de edad.
+def verificador_edad():
+  campo = input("Ingrese su edad: ")
+  edad = 2026 - int(campo)
+  if campo == "":
+    print("Error")
+  elif edad >= 18:
+    print(f"Tienes acceso ya que tu edad es: {campo}")
+  elif edad > 0 and edad < 18:
+    print(f"No tiene Acceso: te faltan {18 - edad} años.")
+  else:
+    print("Ingresa valores validos")
+verificador_edad()
+
 
 # 3. Calculadora de Descuentos
 # Solicita el precio de un producto y la cantidad comprada. 
