@@ -126,30 +126,63 @@ def validacionContraseña():
 # Pide al usuario que ingrese 5 nombres. 
 # Guárdalos en el arreglo y, al final, imprímelos en orden inverso al que fueron ingresados.
 def registroNombres():
+  pass
 
 # 10. Promedio de Notas
 # Solicita al usuario cuántas notas desea ingresar. 
 # Almacena cada nota en un arreglo. 
 # Al finalizar, calcula y muestra el promedio, la nota más alta y la más baja.
 def promedioNotas():
+  cantidad = int(input(f"¿Cuantas notas desea ingresar?"))
+  notas = []
+  for i in range(cantidad):
+    nota = float(input(f"Nota {i+1}: "))
+    notas.append(nota)
+
+    promedio = sum(notas) / len(notas)
+    print(f"Promedio: {promedio}")
+    print(f"Nota más alta: {max(notas)}")
+    print(f"Nota más baja: {min(notas)}")
 
 # 11. Filtro de Arreglos
 # Dado un arreglo de números generado por el usuario, 
 # crea un nuevo arreglo que contenga solo los números que sean mayores a 50. 
 # Muestra ambos arreglos.
 def filtroArreglos():
+  cantidad = int(input("¿Cuantos numeros desea ingresar?: "))
+  mayor50 = []
+  nUser = []
+  for i in range(1, cantidad + 1):
+    arrayUsuario = int(input("Ingrese un número: "))
+    if arrayUsuario > 50:
+      mayor50.append(arrayUsuario)
+    else: 
+      nUser.append(arrayUsuario)
+    print(f"Valores ingresados por el usuario: {nUser } \nValores mayor a 50: {mayor50}")
 
 # 12. Buscador de Elementos
 # Crea una lista de 10 ciudades. 
 # Pide al usuario que ingrese el nombre de una ciudad y el programa debe decir 
 # si la ciudad se encuentra en la lista y en qué índice (posición) está.
 def buscadorElementos():
+  ciudades = ["Nairobi", "", "", "", "", "", "", "", "", "", "", "", "", "",]
 
 # IV. Retos de Lógica Combinada
 # 13. Simulación de Inventario
 # Crea dos arreglos: uno para nombres_productos y otro para precios. 
 # Permite al usuario ingresar 3 productos con sus precios. Luego, muestra una lista formateada: Producto: [Nombre] - Precio: $[Valor].
 def simulacionInventario():
+  nombres_productos = []
+  precios = []
+
+  for i in range(3):
+    nombre = input("Nombre del producto:")
+    precio = float(input("Precio: "))
+    nombres_productos.append(nombre)
+    precios.append(precio)
+    print("\nInventario:")
+    for i in range(3):
+      print(f"Producto: {nombres_productos[i]} . Precio {precios[i]}")
 
 # 14. Generador de Lista de Compras
 # Usa un bucle while para que el usuario agregue artículos a una lista de compras. 
