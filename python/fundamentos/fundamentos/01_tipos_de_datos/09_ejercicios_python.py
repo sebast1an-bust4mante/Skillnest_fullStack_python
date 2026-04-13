@@ -70,19 +70,55 @@ def tablaMultiplicar():
     resultado = num * i
     if resultado % 3 == 0: 
       print(f"Del {num} números son divisibles por 3 : {resultado}")
+
 # 6. Sumatoria con Centinela
-# Crea un programa que pida números continuamente y los sume. El ciclo debe terminar cuando el usuario ingrese un número negativo. Al final, muestra la suma total (sin incluir el negativo).
+# Crea un programa que pida números continuamente y los sume. 
+# El ciclo debe terminar cuando el usuario ingrese un número negativo. 
+# Al final, muestra la suma total (sin incluir el negativo).
 def sumatoriaCentinela():
+    suma_total = 0
+    while True:
+      n = int(input("Ingresa un número (negativo para salir):"))
+      if n < 0:
+        break # finalizar o salir de un bucle en "for" o "while"
+      suma_total += n
+      print(f"La suma total es: {suma_total}")
 
 # 7. Contador de Vocales
-# Pide al usuario una frase o palabra. Utiliza un bucle para recorrer la cadena y contar cuántas vocales tiene en total.
+# Pide al usuario una frase o palabra. 
+# Utiliza un bucle para recorrer la cadena y contar cuántas vocales tiene en total.
 def contadorVocales():
+  texto = input("Ingrese una frase o palabra:").lower()
+  vocales = 0
+  for i in range(len(texto)):
+    #Repetir la condición con cada vocal
+    if texto[i] == "a" or texto[i] == "e" or texto[i] == "i" or texto[i] == "o" or texto[i] == "u": 
+      vocales += 1
+      #Mismo de arriba pero con las vocales con tilde
+    elif texto[i] == "á" or texto[i] == "é" or texto[i] == "í" or texto[i] == "ó" or texto[i] == "ú": 
+      vocales += 1
+      print(f"La cadena '{texto}' tiene {vocales} vocales en total")
 
 # 8. Validación de Contraseña
 # Define una contraseña en una variable. 
-# Pide al usuario que la intente adivinar. Tienes un máximo de 3 intentos; si falla los 3, 
+# Pide al usuario que la intente adivinar. 
+# Tienes un máximo de 3 intentos; si falla los 3, 
 # bloquea el acceso.
 def validacionContraseña():
+  con = 12345678
+  intentos = 1
+  while True:
+    ingresa = input("Ingresa la contraseña: ")
+    if ingresa == con:
+      print("Acceso concedido")
+      break
+    else:
+      intentos += 1
+      if intentos > 3:
+        print("Acceso denegado")
+        break
+      else:
+        print(f"números de intentos: {intentos}")
 
 # III. Manejo de Arreglos / Listas (Avanzado)
 # 9. Registro de Nombres
@@ -153,6 +189,24 @@ while continuar:
   elif opcion == "2":
     print("\nEjecutando ejercicio 2: ")
     print(verificador_edad())
+  elif opcion == "3":
+    print("\nEjecutando ejercicio 3: ")
+    print(calculadoraDescuentos())
+  elif opcion == "4":
+    print("\nEjecutando ejercicio 4: ")
+    print(ClasificadorNumeros())
+  elif opcion == "5":
+    print("\nEjecutando ejercicio 5: ")
+    print(verificador_edad())
+  elif opcion == "6":
+    print("\nEjecutando ejercicio 6: ")
+    print(verificador_edad())
+  elif opcion == "7":
+    print("\nEjecutando ejercicio 7: ")
+    print(contadorVocales())
+  elif opcion == "8":
+    print("\nEjecutando ejercicio 8: ")
+    print(validacionContraseña())
   elif opcion == "0":
     print("Saliendo...")
     continuar = False
