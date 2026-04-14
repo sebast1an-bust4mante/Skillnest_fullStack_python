@@ -188,6 +188,13 @@ def simulacionInventario():
 # Usa un bucle while para que el usuario agregue artículos a una lista de compras. 
 # El proceso termina cuando el usuario escribe "terminar". Al final, muestra la lista ordenada alfabéticamente.
 def listaCompras():
+  lista = []
+  while True:
+    item = input("Articulo (o 'terminar')")
+    if item.lower() == "terminar":
+      break
+    lista.append(item)
+    print(f"Ordenada: {sorted(lista)}")
 
 # 15. Análisis de Temperaturas
 # Solicita las temperaturas de los 7 días de la semana y guárdalas en un arreglo. Muestra:
@@ -195,6 +202,28 @@ def listaCompras():
 # Cuántos días la temperatura fue superior a 25 grados.
 # El día con la temperatura más baja (asumiendo que el índice 0 es Lunes).
 def analisisTemperaturas():
+  dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+  diasSuperior = []
+  total = 0
+  baja = 100
+  diaBaja = ""
+  cant = 0
+
+  while cant < 7:
+    temps = float(input(f"Ingrese temperatura del dia {dias[cant]}: "))
+    total += temps
+
+  if temps < baja and temps < 25:
+    baja = temps
+    diaBaja = dias[cant]
+  elif temps > 25:
+    diasSuperior.append(dias[cant])
+
+    cant += 1
+
+  print(f"El promedio de las temperaturas fue de {total / 7}")
+  print(f"El dia con la temperatura mas baja fue el dia {diaBaja} con {baja}°")
+  print(f"Los dias mas calurosos fueron {diasSuperior}")
 
 # Menu de navegacion para ejercicios
 continuar = True
