@@ -6,7 +6,8 @@ usando ejemplos inspirados en videojuegos y situaciones atractivas.
 # 1. Generador de niveles
 # Imprime todos los niveles del 0 al 100 (incluyendo el 100).
 # (Tu código aquí)
-def generadorNivel():
+for i in range(0, 100, 1):
+    print(i)
 
 # 2. Potenciadores de energía (Múltiplos de 2)
 # Imprime los números múltiplos de 2 desde 2 hasta 500 (incluyendo el 500).
