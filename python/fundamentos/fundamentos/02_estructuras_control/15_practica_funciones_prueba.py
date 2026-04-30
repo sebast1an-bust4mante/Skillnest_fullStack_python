@@ -44,10 +44,43 @@ def contar_vocales(texto):
 
 # 3.- Crear una función que reciba una lista de nombres y muestre únicamente aquellos que 
 # tengan más de 5 letras.
+def filtrar(lista):
+    resultado = []
+    for nombre in lista:
+        if len(nombre) > 5:
+            resultado.append(nombre)
+        return resultado
+    
+def mostrar():
+    nombres = []
 
+for i in range():
+    nombre = input("Ingrese un nombre: ")
+    print(f"{nombre}")
 
 # 4.- Crear una función que reciba una lista de notas (números decimales), 
+def listaNotas(notas):
+    lista = 0
+    for i in range(len(notas)):
+        lista += notas[i]
+    promedio = lista / (len(lista) + 1)
 
+    if notas[i] >= 4.0 and notas[i] <= 7.0:
+        return f"El estudiante {i + 1} pasa con un {promedio}"
+    elif notas[i] >= 1 and notas[i] <= 3.9:
+        return f"El estudiante {i + 1} no pasa con un {promedio}"
+    else:
+        return "Error"
+    
+def ejercicio4():
+    largo = int(input("Cuantas notas va a ingresar: "))
+    nota = [] # nota es una lista
+    for i in range(largo): # el "for" almacena las notas, ejecutando un bucle con un limite
+        inp = float(input(f"Ingrese nota {i + 1}: "))
+        if inp != "": # validacion, si "input" es distinto a vacio, inserta "inp" a nota con ".append"
+            nota.append(inp) # 
+        print(listaNotas(nota)) # Arreglo
+ejercicio4() # llama la funcion "ejercicio4", osea que el codigo se ejecuta de "ejercicio4"
 
 # calcule el promedio e indique si el estudiante aprueba (promedio mayor o igual a 4.0).
 
