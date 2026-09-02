@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Destino ha sido Revelado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="icon-badge icon-sun">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+            <h1>Tu Destino ha sido Revelado</h1>
+            <p>Las estrellas han hablado, {{ nombre }}</p>
+        </div>
+        
+        <div class="card-body">
+            <!-- Bloque de predicción principal con borde verde y estrella -->
+            <div class="main-prediction">
+                <i class="fa-solid fa-star"></i>
+                <p>"{{ prediccion_principal }}"</p>
+            </div>
+
+            <!-- Fila con información de Color y Animal -->
+            <div class="info-row">
+                <!-- Bloque de Color -->
+                <div class="info-block">
+                    <div class="info-header">
+                        <i class="fa-solid fa-palette"></i> Tu Color
+                    </div>
+                    <!-- Círculo que muestra el color del usuario dinámicamente -->
+                    <div class="color-circle" style="background-color: {{ color }};"></div>
+                    <p class="info-text">
+                        Tu preferencia por el color <strong>{{ color }}</strong> revela tu afinidad con la <strong>{{ significado_color }}</strong>.
+                    </p>
+                </div>
+
+                <!-- Bloque de Animal -->
+                <div class="info-block">
+                    <div class="info-header">
+                        <i class="fa-solid fa-paw"></i> Tu Animal
+                    </div>
+                    <p class="info-text">
+                        Tu conexión con el <strong>{{ animal }}</strong> simboliza tu naturaleza de <strong>{{ significado_animal }}</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sección del Número de la Suerte -->
+            <div class="lucky-number-section">
+                <h2>Tu número de la suerte</h2>
+                <div class="number-circle">
+                    {{ numero_suerte }}
+                </div>
+                <p>Este número te acompañará en momentos importantes.</p>
+            </div>
+
+            <!-- Bloque de Edad con borde lila -->
+            <div class="age-block">
+                A tus <strong>{{ edad }} años</strong>, estás en un momento favorable para aprovechar nuevas oportunidades.
+            </div>
+
+            <!-- Botón Consultar de nuevo -->
+            <a href="{{ url_for('index') }}" class="btn-submit">
+                <i class="fa-solid fa-rotate-right"></i> Consultar de nuevo
+            </a>
+        </div>
+
+        <!-- Pie de página de la tarjeta -->
+        <div class="card-footer">
+            Las estrellas te han hablado hoy: {{ nombre }}.
+        </div>
+    </div>
+</body>
+</html>
