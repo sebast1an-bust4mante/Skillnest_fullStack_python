@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Juego del Destino</title>
+    <!-- Íconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hoja de estilos vinculada con Flask -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="card">
+        <!-- Cabecera de la tarjeta -->
         <div class="card-header">
             <div class="moon-icon">
                 <i class="fa-solid fa-moon"></i>
@@ -17,9 +20,11 @@
             <p>Descubre qué te depara el futuro</p>
         </div>
         
+        <!-- Formulario -->
         <div class="card-body">
             <form action="{{ url_for('enviar') }}" method="POST">
                 
+                <!-- Campo Nombre -->
                 <div class="form-group">
                     <div class="input-container">
                         <i class="fa-solid fa-user"></i>
@@ -27,6 +32,7 @@
                     </div>
                 </div>
 
+                <!-- Campo Edad -->
                 <div class="form-group">
                     <div class="input-container">
                         <i class="fa-solid fa-calendar-days"></i>
@@ -34,6 +40,7 @@
                     </div>
                 </div>
 
+                <!-- Campo Color -->
                 <div class="form-group">
                     <div class="input-container">
                         <i class="fa-solid fa-palette"></i>
@@ -42,6 +49,7 @@
                     <div class="help-text">Ej. rojo, azul, verde, morado, amarillo...</div>
                 </div>
 
+                <!-- Campo Animal -->
                 <div class="form-group">
                     <div class="input-container">
                         <i class="fa-solid fa-paw"></i>
@@ -50,10 +58,12 @@
                     <div class="help-text">Ej. perro, gato, águila, león, delfín...</div>
                 </div>
 
+                <!-- Bola Mística -->
                 <div class="orb-container">
                     <div class="orb"></div>
                 </div>
 
+                <!-- Botón de Envío -->
                 <button type="submit" class="btn-submit">
                     <i class="fa-solid fa-wand-magic-sparkles"></i> Revelar mi destino
                 </button>
