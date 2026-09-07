@@ -69,20 +69,19 @@ body {
 }
 
 .card-header h1 {
-    font-size: 28px;
-    margin-bottom: 8px;
+    font-size: 24px;
+    margin-bottom: 5px;
     font-weight: 600;
 }
 
 .card-header p {
-    font-size: 14px;
+    font-size: 13px;
     color: #a099b8;
 }
 
 .card-body {
-    padding: 30px;
+    padding: 25px;
     background: #f8f9fa;
-    flex-grow: 1;
 }
 
 /* Bloque de predicción principal con borde verde */
@@ -195,6 +194,60 @@ body {
     color: #555;
     border: 1px solid #e2e8f0;
     border-left-width: 5px;
+}
+
+.input-container input:focus {
+    border-color: #6c2bd9;
+    box-shadow: 0 0 0 3px rgba(108, 43, 217, 0.1);
+}
+
+/* Estilos de inputs del formulario */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px 12px 12px 42px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.help-text {
+    font-size: 11px;
+    color: #888;
+    margin-top: 4px;
+    margin-left: 2px;
+}
+
+/* Bola mágica */
+.orb-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.orb {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #a78bfa, #6c2bd9 60%, #3b0764);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
 }
 
 /* Botón Consultar de nuevo */
