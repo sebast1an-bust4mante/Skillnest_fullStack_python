@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pymysql = "*"
+flask = "*"
+
+[dev-packages]
+
+[requires]
+<<<<<<<< HEAD:python/Usuarios_CRUD_(core)_sebastian_bustamante/Pipfile
+python_version = "3"
+========
+python_version = "3.14"
+>>>>>>>> 90845321e98c740b381d74c06f12d0df8aa21dc8:python/flask/fundamentos/19.-consultas_con_datos_variables/Pipfile
